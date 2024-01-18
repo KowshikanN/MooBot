@@ -1,0 +1,2 @@
+# MooBot
+ Personal Discord Bot!
