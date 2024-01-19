@@ -9,12 +9,12 @@ class rps(commands.Cog):
     @commands.command()
     async def rps(self, ctx, choice):
 
-        choices = ["rock", "paper", "sissors"]
+        choices = ["rock", "paper", "scissors"]
 
         compChoice = random.choice(choices)
 
         if choice not in choices:
-            await ctx.send("Invaild input, please choose between : rock, paper or sissors!")
+            await ctx.send("Invaild input, please choose between : rock, paper or scissors!")
         else:
             compChoice = random.choice(choices)
 
@@ -24,7 +24,7 @@ class rps(commands.Cog):
                 elif compChoice == "paper":
                     await ctx.send("I got paper! You lose!")
                 else:
-                    await ctx.send("I got sissors! You win!")
+                    await ctx.send("I got scissors! You win!")
 
             if choice == "paper":    
                 if compChoice == "rock":
@@ -32,15 +32,15 @@ class rps(commands.Cog):
                 elif compChoice == "paper":
                     await ctx.send("I got paper! Its a tie!")
                 else:
-                    await ctx.send("I got sissors! You lose!")
+                    await ctx.send("I got scissors! You lose!")
                     
-            if choice == "sissors":    
+            if choice == "scissors":    
                 if compChoice == "rock":
                     await ctx.send("I got rock! You lose!")
                 elif compChoice == "paper":
                     await ctx.send("I got paper! You win!")
                 else:
-                    await ctx.send("I got sissors! Its a tie!")
+                    await ctx.send("I got scissors! Its a tie!")
 
 async def setup(client):
     await client.add_cog(rps(client))
