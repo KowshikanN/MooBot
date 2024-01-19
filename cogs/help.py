@@ -18,6 +18,7 @@ class help(commands.Cog):
         embed.add_field(name = '-------------------------------', value = '', inline = False)
         embed.add_field(name = '!help', value = 'Help menu!', inline = False)
         embed.add_field(name = '!hello', value = 'Quick greeting from MooBot.', inline = False)
+        embed.add_field(name = '!weather <city>', value = 'Tells you the weather of a city.', inline = False)
         embed.add_field(name = '!rps <choice>', value = 'Play a game of Rock, Paper, Scissors against me!', inline = False)
         embed.add_field(name = '!chat <question>', value = 'I have chatGPT build in, so ask me a question.', inline = False)
 
